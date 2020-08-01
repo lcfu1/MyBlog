@@ -4,13 +4,26 @@
   <title><![CDATA[MyBlog]]></title>
   <link href="/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2020-08-01T22:08:12+08:00</updated>
+  <updated>2020-08-01T22:56:51+08:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[1q]]></title>
+    <link href="/15962937754124.html"/>
+    <updated>2020-08-01T22:56:15+08:00</updated>
+    <id>/15962937754124.html</id>
+    <content type="html"><![CDATA[
+<p>asq1</p>
+
+<p><img src="media/15962937754124/%E6%88%AA%E5%B1%8F2020-08-01%2022.56.30.png" alt="截屏2020-08-01 22.56.30"/></p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[hello]]></title>
@@ -28,7 +41,8 @@
     <updated>2020-08-01T22:03:53+08:00</updated>
     <id>/15962906335171.html</id>
     <content type="html"><![CDATA[
-<p>qq</p>
+<p>qq1<br/>
+aa11</p>
 
 ]]></content>
   </entry>
