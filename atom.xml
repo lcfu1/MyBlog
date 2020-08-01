@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[MyBlog]]></title>
+  <link href="/atom.xml" rel="self"/>
+  <link href="/"/>
+  <updated>2020-08-01T22:08:12+08:00</updated>
+  <id>/</id>
+  <author>
+    <name><![CDATA[]]></name>
+    
+  </author>
+  <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[hello]]></title>
+    <link href="/15962908785289.html"/>
+    <updated>2020-08-01T22:07:58+08:00</updated>
+    <id>/15962908785289.html</id>
+    <content type="html"><![CDATA[
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[11]]></title>
+    <link href="/15962906335171.html"/>
+    <updated>2020-08-01T22:03:53+08:00</updated>
+    <id>/15962906335171.html</id>
+    <content type="html"><![CDATA[
+<p>qq</p>
+
+]]></content>
+  </entry>
+  
+</feed>
