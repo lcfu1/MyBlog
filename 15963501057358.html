@@ -31,6 +31,8 @@
                 
                 <a target="_self" class="navbar-item " href="about.html">关于</a>
                 
+                <a target="_self" class="navbar-item " href="pdf.html">PDF</a>
+                
 
                 <a role="button" id="navbarSNSRssSwitchBtn" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarSNSRssButtons">
                   <span aria-hidden="true"></span>
@@ -205,6 +207,8 @@
 </li>
 </ul>
 
+
+<p>注：参考了kotlin-docs.pdf</p>
 </blockquote>
 
 <p>在 Kotlin 中，所有东西都是对象，在这个意义上讲我们可以在任何变量上调⽤成员函数与属性。</p>
@@ -221,7 +225,7 @@
 
 <p>在值后追加 L 后缀可以显式指定 Long 型值。</p>
 
-<pre><code class="language-text">val one = 1 // Int 
+<pre><code class="language-kotlin">val one = 1 // Int 
 val threeBillion = 3000000000 // Long 
 val oneLong = 1L // Long 
 val oneByte: Byte = 1
@@ -235,7 +239,7 @@ val oneByte: Byte = 1
 
 <p>如需将⼀个值显式指定为 Float 类型，请添加 f 或 F 后缀。如果这样的值包含多于 6〜7 位⼗进制数，那么会将其舍⼊。</p>
 
-<pre><code class="language-text">val pi = 3.14 // Double 
+<pre><code class="language-kotlin">val pi = 3.14 // Double 
 val e = 2.7182818284 // Double 
 val eFloat = 2.7182818284f // Float，实际值为 2.7182817
 </code></pre>
@@ -255,7 +259,7 @@ Float类型⽤f或者F标记：123.5f</p>
 
 <p>使⽤下划线使数字常量更易读。</p>
 
-<pre><code class="language-text">val oneMillion = 1_000_000
+<pre><code class="language-kotlin">val oneMillion = 1_000_000
 val creditCardNumber = 1234_5678_9012_3456L
 val socialSecurityNumber = 999_99_9999L
 val hexBytes = 0xFF_EC_DE_5E
@@ -268,7 +272,7 @@ val bytes = 0b11010010_01101001_10010100_10010010
 
 <p>⼀个可空的引⽤（如 Int? ）或泛型会把数字装箱。数字装箱不⼀定保留同⼀性。</p>
 
-<pre><code class="language-text">val a: Int = 100 
+<pre><code class="language-kotlin">val a: Int = 100 
 val boxedA: Int? = a 
 val anotherBoxedA: Int? = a
 
@@ -281,7 +285,7 @@ println(boxedA === anotherBoxedA) // true println(boxedB === anotherBoxedB) // f
 
 <p>但保留相等性。</p>
 
-<pre><code class="language-text">val a: Int = 10000 
+<pre><code class="language-kotlin">val a: Int = 10000 
 println(a == a) // 输出“true” 
 val boxedA: Int? = a 
 val anotherBoxedA: Int? = a 
@@ -292,13 +296,13 @@ println(boxedA == anotherBoxedA) // 输出“true”
 
 <p>较⼩的类型不能隐式转换为较⼤的类型。</p>
 
-<pre><code class="language-text">val b: Byte = 1 // OK, 字⾯值是静态检测的 
+<pre><code class="language-kotlin">val b: Byte = 1 // OK, 字⾯值是静态检测的 
 val i: Int = b // 错误
 </code></pre>
 
 <p>可以显式转换来拓宽数字。</p>
 
-<pre><code class="language-text">val i: Int = b.toInt() // 正确：显式拓宽
+<pre><code class="language-kotlin">val i: Int = b.toInt() // 正确：显式拓宽
 </code></pre>
 
 <p>数字类型⽀持如下转换。<br/>
@@ -312,7 +316,7 @@ toChar(): Char</p>
 
 <p>算术运算会有重载做适当转换。</p>
 
-<pre><code class="language-text">val l = 1L + 3 // Long + Int =&gt; Long
+<pre><code class="language-kotlin">val l = 1L + 3 // Long + Int =&gt; Long
 </code></pre>
 
 <h2 id="toc_7">运算</h2>
@@ -323,14 +327,14 @@ toChar(): Char</p>
 
 <p>整数间的除法总是返回整数。会丢弃任何⼩数部分。</p>
 
-<pre><code class="language-text">val x = 5 / 2 
+<pre><code class="language-kotlin">val x = 5 / 2 
 //println(x == 2.5) // ERROR: Operator &#39;==&#39; cannot be applied to &#39;Int&#39; and &#39;Double&#39; 
 println(x == 2)
 </code></pre>
 
 <p>如需返回浮点类型，请将其中的⼀个参数显式转换为浮点类型。</p>
 
-<pre><code class="language-text">val x = 5 / 2.toDouble() 
+<pre><code class="language-kotlin">val x = 5 / 2.toDouble() 
 println(x == 2.5)
 </code></pre>
 
@@ -338,7 +342,7 @@ println(x == 2.5)
 
 <p>使⽤中缀⽅式调⽤具名函数。</p>
 
-<pre><code class="language-text">val x = 1 shl 2
+<pre><code class="language-kotlin">val x = 1 shl 2
 </code></pre>
 
 <p>完整的位运算列表（只⽤于 Int 与 Long ）：<br/>
@@ -381,7 +385,7 @@ inv()：位⾮</p>
 
 <p>⽤接受数组⼤⼩以及⼀个函数参数的 Array 构造函数，⽤作参数的函数能够返回给定索引的每个元素初始值：</p>
 
-<pre><code class="language-text">// 创建⼀个 Array&lt;String&gt; 初始化为 [&quot;0&quot;, &quot;1&quot;, &quot;4&quot;, &quot;9&quot;, &quot;16&quot;]
+<pre><code class="language-kotlin">// 创建⼀个 Array&lt;String&gt; 初始化为 [&quot;0&quot;, &quot;1&quot;, &quot;4&quot;, &quot;9&quot;, &quot;16&quot;]
 
 val asc = Array(5) { i -&gt; (i * i).toString() } asc.forEach { println(it) }
 </code></pre>
@@ -392,7 +396,7 @@ val asc = Array(5) { i -&gt; (i * i).toString() } asc.forEach { println(it) }
 
 <p>Kotlin 也有⽆装箱开销的专⻔的类来表⽰原⽣类型数组: ByteArray 、ShortArray 、IntArray 等等。这些类与 Array 并没有继承关系，但是它们有同样的⽅法属性集。它们也都有相应的⼯⼚⽅法:</p>
 
-<pre><code class="language-text">// ⼤⼩为 5、值为 [0, 0, 0, 0, 0] 的整型数组 val arr = IntArray(5)
+<pre><code class="language-kotlin">// ⼤⼩为 5、值为 [0, 0, 0, 0, 0] 的整型数组 val arr = IntArray(5)
 
 // 例如：⽤常量初始化数组中的值
 // ⼤⼩为 5、值为 [42, 42, 42, 42, 42] 的整型数组
@@ -426,7 +430,7 @@ kotlin.ULongArray : ⽆符号⻓整型数组。</p>
 
 <p>后缀 u 与 U 将字⾯值标记为⽆符号。确切类型会根据预期类型确定。如果没有提供预期的类型，会根据字⾯值⼤ ⼩选择 UInt 或者 ULong。</p>
 
-<pre><code class="language-text">val b: UByte = 1u // UByte，已提供预期类型
+<pre><code class="language-kotlin">val b: UByte = 1u // UByte，已提供预期类型
 val s: UShort = 1u // UShort，已提供预期类型
 val l: ULong = 1u // ULong，已提供预期类型
 
@@ -436,14 +440,14 @@ val a2 = 0xFFFF_FFFF_FFFFu // ULong：未提供预期类型，常量不适于 UI
 
 <p>后缀 uL 与 UL 显式将字⾯值标记为⽆符号⻓整型。</p>
 
-<pre><code class="language-text">val a = 1UL // ULong，即使未提供预期类型并且常量适于 UInt
+<pre><code class="language-kotlin">val a = 1UL // ULong，即使未提供预期类型并且常量适于 UInt
 </code></pre>
 
 <h1 id="toc_17">字符串</h1>
 
 <p>字符串⽤ String 类型表⽰。字符串是不可变的。字符串的字符元素可以使⽤索引运算符访问: s[i] 。可以⽤ for 循环迭代字符串:</p>
 
-<pre><code class="language-text">for (c in str) { 
+<pre><code class="language-kotlin">for (c in str) { 
     println(c) 
 }
 </code></pre>
@@ -452,13 +456,13 @@ val a2 = 0xFFFF_FFFF_FFFFu // ULong：未提供预期类型，常量不适于 UI
 
 <p>Kotlin 有两种类型的字符串字⾯值: 转义字符串可以有转义字符，以及原始字符串可以包含换⾏以及任意⽂本。</p>
 
-<pre><code class="language-text">//转义字符串
+<pre><code class="language-kotlin">//转义字符串
 val s = &quot;Hello, world!\n&quot;
 </code></pre>
 
 <p>原始字符串使⽤三个引号（ &quot;&quot;&quot; ）分界符括起来，内部没有转义并且可以包含换⾏以及任何其他字符:</p>
 
-<pre><code class="language-text">val text = &quot;&quot;&quot;
+<pre><code class="language-kotlin">val text = &quot;&quot;&quot;
         |Tell me and I forget. 
         |Teach me and I remember. 
         |Involve me and I learn. 
@@ -476,7 +480,7 @@ val s = &quot;Hello, world!\n&quot;
 
 <p>或者⽤花括号括起来的任意表达式。</p>
 
-<pre><code class="language-text">val s = &quot;abc&quot;
+<pre><code class="language-kotlin">val s = &quot;abc&quot;
 println(&quot;$s.length is ${s.length}&quot;)
 </code></pre>
 
