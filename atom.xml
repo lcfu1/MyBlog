@@ -4,13 +4,23 @@
   <title><![CDATA[MyBlog]]></title>
   <link href="/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2020-08-01T22:56:51+08:00</updated>
+  <updated>2020-08-01T22:56:53+08:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[ff]]></title>
+    <link href="/15963436983181.html"/>
+    <updated>2020-08-02T12:48:18+08:00</updated>
+    <id>/15963436983181.html</id>
+    <content type="html"><![CDATA[
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[1q]]></title>
