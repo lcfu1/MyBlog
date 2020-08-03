@@ -84,7 +84,31 @@
             </nav>
       </div>
 
-   <div class="hero-body ct-body">
+<!-- 图片查看 -->
+<script src="asset/jquery.min.js"></script>
+<script src="asset/photoviewer.min.js"></script>
+<link href="asset/css/photoviewer.min.css" rel="stylesheet">
+<script>
+  $(function() {
+    
+    $(document).on("click", "img", function(e) {
+      e.preventDefault();
+        
+      var items = [{
+        src: $(this).attr('src'),
+        title: '图片查看'
+      }];
+      var options = {
+        index: 0,
+        initMaximized: true,
+        headToolbar: ['zoomIn', 'zoomOut', 'actualSize', 'maximize', 'close'],
+      };
+    
+      new PhotoViewer(items, options);
+  
+    });
+  });
+</script>   <div class="hero-body ct-body">
     <div class="container">
           <h1 class="title-only">
                 <span clsss="tran-archives">Archives</span>
@@ -118,7 +142,6 @@
                                      
                              
                                   
-                              <span class="tran-tags">Tags:</span>&nbsp;
                                 
                            </p>
                           </div>
@@ -139,7 +162,6 @@
                                      
                              
                                   
-                              <span class="tran-tags">Tags:</span>&nbsp;
                                 
                            </p>
                           </div>
@@ -160,7 +182,6 @@
                                      
                              
                                   
-                              <span class="tran-tags">Tags:</span>&nbsp;
                                 
                            </p>
                           </div>
@@ -181,7 +202,6 @@
                                      
                              
                                   
-                              <span class="tran-tags">Tags:</span>&nbsp;
                                 
                            </p>
                           </div>
